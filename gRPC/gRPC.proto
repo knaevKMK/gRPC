@@ -1,3 +1,47 @@
 syntax = "proto3";
 
+import "google/protobuf/empty.proto";
+
 option csharp_namespace = "MyApp.Namespace";
+
+service Identity {
+  rpc Register (RegisterRequest) returns (ConfirmationResponse);
+  rpc Login (LoginRequest) returns (LoginResponse);
+  rpc GetProfile (google.protobuf.Empty) returns (UserProfileResponse);
+}
+
+// The request message to register
+message RegisterRequest {
+  string username = 1;
+  string email = 2;
+  string password= 3;
+  string confirmpassword= 4;
+}
+
+// The response message to register
+message ConfirmationResponse {
+  bool success = 1;
+  string error=2;
+}
+
+// The request message to login
+message LoginRequest {
+   string username = 1;
+   string password= 2;
+}
+
+// The response message to login
+message LoginResponse {
+  bool success = 1;
+  string error=2;
+  string token = 3;
+  string refreshtoken=4;
+}
+
+// The response message user-data
+message UserProfileResponse {
+  bool success = 1;
+  string error=2;
+  string username = 3;
+  string email = 4;
+}

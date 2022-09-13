@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
 	<PropertyGroup>
 		<TargetFramework>net6.0</TargetFramework>
@@ -7,7 +7,7 @@
 	</PropertyGroup>
 
 	<ItemGroup>
-		<Protobuf Include="..\gRPC\gRPC.proto" GrpcServices="Client" Link="gRPC\gRPC.proto" />
+		<Protobuf Include="..\gRPC\gRPC.proto" GrpcServices="Server" Link="gRPC\gRPC.proto" />
 	</ItemGroup>
 
 	<ItemGroup>

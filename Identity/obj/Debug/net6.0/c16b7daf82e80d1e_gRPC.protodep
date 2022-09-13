@@ -1,1 +1,3 @@
-obj\Debug\net6.0/GRPC.cs: ../gRPC/gRPC.proto
+obj\Debug\net6.0/GRPC.cs \
+obj\Debug\net6.0/GRPCGrpc.cs: C:/Users/I am/.nuget/packages/grpc.tools/2.40.0/build/native/include/google/protobuf/empty.proto\
+ ../gRPC/gRPC.proto
